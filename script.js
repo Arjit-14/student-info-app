@@ -1,3 +1,8 @@
-/* Student 3 will add functionality to this file later in their feature/javascript branch */
-// The goal will be to make the "Show Details" button display the student info div.
-console.log("App loaded. JS functionality to be added.");
+const showDetailsButton = document.getElementById("show-details-btn");
+const studentInfo = document.getElementById("student-info");
+
+showDetailsButton.addEventListener("click", () => {
+	const detailsAreVisible = studentInfo.style.display !== "none";
+	studentInfo.style.display = detailsAreVisible ? "none" : "block";
+	showDetailsButton.textContent = detailsAreVisible ? "Show Details" : "Hide Details";
+});
